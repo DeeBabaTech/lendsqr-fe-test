@@ -23,8 +23,7 @@ function Dashboard() {
         setInfo(res.data);
       };
 
-      fetchData();
-      setLoading(false);
+      fetchData().then(() => setLoading(false));
     } catch (error) {
       setLoading(false);
       console.log(error);
