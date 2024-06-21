@@ -70,9 +70,9 @@
 .imageMenu {
   display: none;
 
-  @include desktop() {
-    display: block;
-  }
+  // @include desktop() {
+  //   display: block;
+  // }
 }
 
 .rounded {

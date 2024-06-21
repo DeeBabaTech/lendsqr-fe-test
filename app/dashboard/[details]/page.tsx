@@ -63,10 +63,6 @@ export default function Page({ params }: { params: { details: string } }) {
       };
 
       fetchUser();
-
-      if (!fetchUser) {
-        notFound();
-      }
     } catch (error) {
       console.error(error);
     }
