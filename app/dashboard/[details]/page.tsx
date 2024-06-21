@@ -70,7 +70,7 @@ export default function Page({ params }: { params: { details: string } }) {
     } catch (error) {
       console.error(error);
     }
-  }, []);
+  }, [_id]);
   return (
     <div className={style.details}>
       <Link href='/dashboard' className={style.link}>
@@ -95,7 +95,7 @@ export default function Page({ params }: { params: { details: string } }) {
           </div>
           <p className={style.line}></p>
           <div>
-            <p>User's Tier</p>
+            <p>User Tier</p>
             <div>
               <Image src='/star-fill.png' alt='' width={20} height={20} />
               <Image src='/fill-star.png' alt='' width={20} height={20} />
