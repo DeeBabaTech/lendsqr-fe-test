@@ -1,0 +1,238 @@
+@import "./../../colour.module";
+@import "./../../mixins";
+
+.details {
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem;
+
+  @include desktop() {
+    padding: 2rem;
+  }
+}
+
+.link {
+  display: flex;
+  color: $text-color;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  font-size: large;
+  gap: 1rem;
+  width: fit-content;
+
+  :hover {
+    color: $primary-color;
+  }
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+
+  @include desktop() {
+    display: block;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    color: $heading;
+    font-weight: bold;
+
+    @include desktop() {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    p {
+      font-size: 0.7rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      color: green;
+      outline: 1px solid green;
+
+      @include desktop() {
+        font-size: 0.8rem;
+      }
+    }
+
+    :first-child {
+      outline: 1px solid red;
+      color: red;
+    }
+  }
+}
+
+.general {
+  background-color: $white;
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.19);
+  padding: 0 1rem;
+  padding-top: 1rem;
+
+  div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    div:first-child {
+      // width: 35%;
+
+      @include desktop() {
+        width: 100%;
+      }
+
+      :nth-child(1) {
+        border-radius: 50%;
+
+        @include desktop() {
+          width: 70%;
+          height: 70%;
+        }
+      }
+
+      div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+        width: 100%;
+
+        p:first-child {
+          font-weight: 600;
+          color: $heading;
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+
+          @include desktop() {
+            width: 100%;
+            font-size: 1.2rem;
+          }
+        }
+
+        p:nth-child(2) {
+          font-size: small;
+        }
+      }
+    }
+
+    div:nth-child(3) {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      @include desktop() {
+        display: none;
+      }
+    }
+
+    div:nth-child(5) {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+      color: $heading;
+
+      p:first-child {
+        font-weight: bold;
+      }
+
+      @include desktop() {
+        display: none;
+      }
+    }
+  }
+
+  .outline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+
+    @include desktop() {
+      overflow: auto;
+      gap: 2rem;
+    }
+
+    div:first-child {
+      padding: 1rem 0;
+      border-bottom: 1px solid $primary-color;
+    }
+  }
+}
+
+.line {
+  width: 0.1rem;
+  height: 5rem;
+  background: $form-text;
+
+  @include desktop() {
+    display: none;
+  }
+}
+
+.lineFlat {
+  width: full;
+  height: 0.1rem;
+  background: $text-color;
+}
+
+.info {
+  background: $white;
+  padding: 1rem 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.19);
+
+  @include desktop() {
+    padding: 0.5rem 1.5rem;
+  }
+
+  h3 {
+    color: $heading;
+    margin-top: 1rem;
+  }
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+
+    @include desktop() {
+      margin: 0.5rem 0;
+      margin-right: 1rem;
+      // justify-content: space-around;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      min-width: 25%;
+      max-width: 25%;
+      margin-bottom: 1rem;
+
+      @include desktop() {
+        max-width: 100%;
+      }
+
+      h3 {
+        color: $text-color;
+        font-size: 0.8rem;
+        margin-top: 0rem;
+      }
+
+      p {
+        color: $heading;
+      }
+    }
+  }
+}

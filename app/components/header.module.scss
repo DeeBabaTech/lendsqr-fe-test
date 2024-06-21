@@ -1,0 +1,80 @@
+@import "./../colour.module";
+@import "./../mixins";
+
+.flexHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: white;
+
+  @include desktop() {
+    div:nth-child(3) {
+      display: none;
+    }
+
+    div:nth-child(4) {
+      :first-child,
+      :nth-child(2),
+      :last-child {
+        display: none;
+      }
+    }
+
+    :nth-child(2) {
+      width: 40%;
+      height: 40%;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+
+  input {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 20rem;
+    height: 2.5rem;
+    border-color: $form-text;
+  }
+
+  div {
+    background-color: $primary-color;
+    height: 2.5rem;
+    padding: 0.5rem;
+    padding-top: 0.7rem;
+    border-top-right-radius: 0.5rem /* 8px */;
+    border-bottom-right-radius: 0.5rem /* 8px */;
+  }
+
+  p:first-child {
+    margin-right: 2rem;
+    text-decoration: underline;
+  }
+
+  p {
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+  }
+
+  Image {
+    display: none;
+  }
+}
+
+.imageMenu {
+  display: none;
+
+  @include desktop() {
+    display: block;
+  }
+}
+
+.rounded {
+  border-radius: 50%;
+}

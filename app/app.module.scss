@@ -1,0 +1,104 @@
+@import "./colour.module";
+@import "./mixins";
+
+.flexContainer {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+
+  @include desktop() {
+    display: block;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .loginImages {
+    background-color: white;
+    width: 50%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include desktop() {
+      display: block;
+      width: 100%;
+      margin-bottom: 2rem;
+      background-color: #fbfbfb;
+
+      :first-child {
+        width: 50%;
+        height: 50%;
+      }
+
+      :nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}
+
+.form {
+  width: 50%;
+  margin: auto;
+  margin-left: 5rem;
+
+  @include desktop() {
+    width: 100%;
+    margin: auto;
+    margin-left: 0;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: $heading;
+
+    @include desktop() {
+      font-size: 1.7rem;
+    }
+  }
+
+  p {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  input {
+    width: 75%;
+    padding: 1rem;
+    border: 2px solid $form-text;
+    margin-bottom: 1rem;
+
+    @include desktop() {
+      width: 100%;
+    }
+  }
+
+  input::placeholder {
+    color: $text-color;
+  }
+
+  a {
+    color: $primary-color;
+
+  }
+
+  button {
+    background-color: $primary-color;
+    color: white;
+    width: 75%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+
+    @include desktop() {
+      width: 100%;
+    }
+  }
+}

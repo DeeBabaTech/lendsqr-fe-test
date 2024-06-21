@@ -1,0 +1,80 @@
+@import "./../colour.module";
+@import "./../mixins";
+
+.width {
+  width: 25%;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 0 1.5rem;
+
+  @include desktop() {
+    display: none;
+  }
+}
+
+.mTop {
+  padding: 1rem 0;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style-type: none;
+
+    h2 {
+      font-size: small;
+      margin: 1rem 0;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+
+  li {
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.user {
+  position: relative;
+
+  ::before {
+    content: " ";
+    padding: 0.7rem 0;
+    margin-top: -0.7rem;
+    position: absolute;
+    height: 100%;
+    left: -1.5rem;
+    width: 5px;
+    background-color: $primary-color;
+  }
+
+  ::after {
+    content: " ";
+    padding: 0.7rem 0;
+    margin-top: -0.7rem;
+    position: absolute;
+    height: 100%;
+    right: -1.5rem;
+    width: 125%;
+    opacity: 0.2;
+    background-color: $primary-color;
+    // z-index: -1;
+  }
+}
