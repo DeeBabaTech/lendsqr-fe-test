@@ -8,7 +8,7 @@ export default function Home() {
     <div className={style.flexContainer}>
       <div className={style.loginImages}>
         <Image src='/Group.svg' alt='Logo' width={200} height={100} priority/>
-        <Image src='/pablo.svg' alt='Logo' width={450} height={400} />
+        <Image src='/pablo.svg' alt='Logo' width={450} height={400} priority />
       </div>
 
       <div className={style.form}>
