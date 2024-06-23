@@ -70,7 +70,7 @@ export default function Page({ params }: { params: { details: string } }) {
     }
   }, [_id]);
 
-  if (!lenderInfo) {
+  if (parseInt(_id) > 500) {
     notFound();
   }
 

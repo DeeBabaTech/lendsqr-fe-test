@@ -1,12 +1,12 @@
 import Link from "next/link";
-import React from "react";
+import style from "@/app/components/notfound.module.scss";
 
-export default async function NotFound() {
+export default function NotFound() {
   return (
-    <main>
-      <h2>Not Found</h2>
-      <p>Could not find requested details</p>
-      <Link href='/dashboard'> Go back </Link>
+    <main className={style.loader}>
+        <h3>Not Found</h3>
+        <p>Could not find requested details</p>
+        <Link href='/dashboard'> Go back </Link>
     </main>
   );
 }
